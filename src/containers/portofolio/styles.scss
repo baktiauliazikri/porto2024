@@ -1,0 +1,119 @@
+.portofolio {
+  padding: 1rem;
+  background-color: var(--blue-theme-background-color);
+  color: var(--blue-theme-sub-text-color);
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+}
+
+.filter-button {
+  background: var(--blue-theme-skill-background-color);
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  color: var(--blue-theme-sub-text-color);
+}
+
+.filter-button:hover,
+.filter-button.active {
+  background: var(--blue-theme-main-color);
+  color: var(--blue-theme-background-color);
+  border-color: var(--blue-theme-main-color);
+}
+
+.portofolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.portofolio-item {
+  background: var(--blue-theme-skill-background-color);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  // text-align: center;
+}
+
+.portofolio-item h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--blue-theme-main-color);
+  border-bottom: 1px dashed var(--blue-theme-main-color);
+}
+
+.portofolio-item h4 {
+  margin-bottom: 1rem;
+
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 1rem;
+  color: var(--blue-theme-main-color);
+}
+
+.portofolio-item p {
+  border-top: 1px dashed var(--blue-theme-main-color);
+  margin-bottom: 1rem;
+  font-size: 15px;
+  text-align: justify;
+  color: var(--blue-theme-sub-text-color);
+}
+
+.portofolio-item .portofolio-links {
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+}
+
+.portofolio-item a {
+  color: var(--blue-theme-main-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.portofolio-item a:hover {
+  text-decoration: underline;
+  color: var(--blue-theme-sub-text-color);
+}
+
+@media (max-width: 768px) {
+  .portofolio-item {
+    padding: 0.75rem;
+    /* Mengurangi padding pada item portofolio */
+  }
+
+  .portofolio-item h3 {
+    font-size: 1.5rem;
+    /* Mengurangi ukuran font judul */
+  }
+
+  .portofolio-item h4 {
+    font-size: 0.875rem;
+    /* Mengurangi ukuran font subtitle */
+  }
+
+  .portofolio-item p {
+    font-size: 14px;
+    /* Mengurangi ukuran font deskripsi */
+  }
+
+  .portofolio-item .portofolio-links {
+    justify-content: center;
+    /* Pusatkan tautan pada layar lebih kecil */
+    margin-top: 1rem;
+    /* Tambah margin atas */
+  }
+}
