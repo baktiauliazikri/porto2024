@@ -27,7 +27,7 @@ const Contact = () => {
         >
           <div className="contact__card">
             <div className="contact__card__image">
-              <img src="/images/bakti.jpg" alt="Photo" />
+            <img src="/images/bakti.jpg" alt="" />
             </div>
             <div className="contact__card__info">
               <table className="contact__card__table">
@@ -39,7 +39,11 @@ const Contact = () => {
                   <tr>
                     <td className="contact__card__label">Email</td>
                     <td className="contact__card__value">
-                      <a href="mailto:baktiauliaz@com" target="_blank">
+                      <a
+                        href="mailto:baktiauliaz@com"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         baktiauliaz@com
                       </a>
                     </td>
