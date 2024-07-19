@@ -16,7 +16,7 @@ const Home = () => {
         <h1>
           Hello, I'm Bakti
           <br />
-          Fullstack Developer
+          Fullstack Web Developer
         </h1>
       </div>
       <Animate
