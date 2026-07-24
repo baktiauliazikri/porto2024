@@ -1,0 +1,220 @@
+.navbar {
+  background: var(--blue-theme-nav-background-color);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--blue-theme-border-color);
+  transition: background 0.3s ease, border-color 0.3s ease;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    padding: 0 24px;
+  }
+
+  &__logo {
+    color: var(--blue-theme-sub-text-color);
+    font-family: var(--font-heading);
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    &__dot {
+      color: var(--blue-theme-main-color);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+
+    &__item {
+      position: relative;
+    }
+
+    &__link {
+      color: var(--blue-theme-muted-text-color);
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      transition: all 0.25s ease;
+
+      &:hover {
+        color: var(--blue-theme-main-color);
+        background: rgba(96, 216, 110, 0.08);
+      }
+
+      &.active {
+        color: var(--blue-theme-main-color);
+        background: rgba(96, 216, 110, 0.12);
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  &__cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.7rem 1.4rem;
+    background: rgba(96, 216, 110, 0.12);
+    border: 1px solid rgba(96, 216, 110, 0.3);
+    color: var(--blue-theme-main-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+
+    &:hover {
+      background: var(--blue-theme-main-color);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(96, 216, 110, 0.3);
+    }
+  }
+
+  &__backdrop {
+    display: none;
+  }
+}
+
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--blue-theme-card-background);
+  border: 1px solid var(--blue-theme-border-color);
+  color: var(--blue-theme-main-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: rotate(15deg) scale(1.08);
+    border-color: var(--blue-theme-main-color);
+    box-shadow: var(--blue-theme-glow);
+  }
+}
+
+.nav-icon {
+  display: none;
+  cursor: pointer;
+  color: var(--blue-theme-main-color);
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: rgba(96, 216, 110, 0.1);
+  }
+}
+
+.desktop-only {
+  display: inline-flex;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .navbar {
+    &__menu {
+      position: fixed;
+      top: 80px;
+      right: -100%;
+      width: 280px;
+      height: calc(100vh - 80px);
+      background: var(--blue-theme-nav-background-color);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 32px 24px;
+      gap: 1.6rem;
+      box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+      transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1001;
+
+      &.active {
+        right: 0;
+      }
+
+      &__item {
+        width: 100%;
+      }
+
+      &__link {
+        display: block;
+        width: 100%;
+        font-size: 1.6rem;
+        padding: 1.2rem 1.6rem;
+      }
+    }
+
+    &__cv-btn {
+      width: 100%;
+      justify-content: center;
+      padding: 1.2rem 1.6rem;
+      font-size: 1.5rem;
+    }
+
+    &__backdrop {
+      display: block;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100vw;
+      height: calc(100vh - 80px);
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+    }
+  }
+
+  .nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

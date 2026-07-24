@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Default Dark Theme Variables */
+  --blue-theme-background-color: #121214;
+  --blue-theme-main-color: #60d86e;
+  --blue-theme-main-color-hover: #4ec25c;
+  --blue-theme-sub-text-color: #ffffff;
+  --blue-theme-muted-text-color: #a1a1aa;
+  --blue-theme-nav-background-color: rgba(24, 24, 27, 0.85);
+  --blue-theme-card-background: rgba(28, 28, 35, 0.7);
+  --blue-theme-skill-background-color: #1e1e24;
+  --blue-theme-border-color: rgba(255, 255, 255, 0.1);
+  --blue-theme-gradient-accent: linear-gradient(135deg, #60d86e 0%, #38ef7d 100%);
+  --blue-theme-glow: 0 0 25px rgba(96, 216, 110, 0.25);
+  --font-primary: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+}
+
+[data-theme='light'] {
+  /* Light Theme Variables */
+  --blue-theme-background-color: #f8fafc;
+  --blue-theme-main-color: #16a34a;
+  --blue-theme-main-color-hover: #15803d;
+  --blue-theme-sub-text-color: #0f172a;
+  --blue-theme-muted-text-color: #475569;
+  --blue-theme-nav-background-color: rgba(255, 255, 255, 0.88);
+  --blue-theme-card-background: rgba(255, 255, 255, 0.85);
+  --blue-theme-skill-background-color: #f1f5f9;
+  --blue-theme-border-color: rgba(15, 23, 42, 0.12);
+  --blue-theme-gradient-accent: linear-gradient(135deg, #16a34a 0%, #059669 100%);
+  --blue-theme-glow: 0 0 20px rgba(22, 163, 74, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: var(--font-primary);
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--blue-theme-background-color);
+  color: var(--blue-theme-sub-text-color);
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--blue-theme-background-color);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-theme-main-color);
+}
+
+/* Selection */
+::selection {
+  background: rgba(96, 216, 110, 0.3);
+  color: var(--blue-theme-sub-text-color);
+}
